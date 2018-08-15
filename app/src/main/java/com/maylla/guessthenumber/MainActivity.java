@@ -5,11 +5,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
 
 public class MainActivity extends Activity implements View.OnKeyListener {
 
@@ -48,8 +46,10 @@ public class MainActivity extends Activity implements View.OnKeyListener {
             palpite=0;
             tentativas.setText("");}
         else if(chute > sorteio){
-            msg.setText("try a smaller number");}
+            msg.setText("try a smaller number");
+            numero.getText().clear();}
         else{
-            msg.setText("try a larger number");}
+            msg.setText("try a larger number");
+            numero.getText().clear();}
     }
 }
